@@ -4,7 +4,13 @@ spring:
     name: item-service
   cloud:
     config:
-      override-none: true    
+      override-none: true   
+      discovery: 
+        enabled: true
+        service-id: config-server
+      name: item-service
+      profile: dev 
+      
 server:
   port: 8001
 eureka:
